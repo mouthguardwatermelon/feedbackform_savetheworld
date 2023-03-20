@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' type = 'text/css' href ="{{ url_for('static', filename='styles.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <br>
+    <h1>HI ASRJCIANS! Please submit your feedback here!</h1>
+<div class = 'form'>
+    <form class = 'feedback' method = 'POST' action>
+        <label for = 'name'>Name:</label>
+        <br>
+        <input type = 'text' id = 'name' name = 'name' required placeholder="Type here">
+        <br>
+        <br>
+
+        <label for = 'email'>Email:</label>
+        <br>
+        <input type = 'email' id = 'email' name = 'email' required placeholder="Type here"><br><br>
+        <label for = 'feedback'>Your feedback please &#128522; :</label>
+        <br>
+        <textarea id="feedback" name="feedback" required type = 'feedback'></textarea>
+        <br>
+        <br>
+        <input type = 'submit' name = 'submit' value = 'submit' id = 'submit'>
+    </form>
+</div>
+{% if name %}
+<h1>We hope to get in touch with you soon {{name}}! </h1>
+{% endif %}
+</body>
+</html>
